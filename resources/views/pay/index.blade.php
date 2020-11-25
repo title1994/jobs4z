@@ -59,6 +59,6 @@
 @stop   
 
 @section('scripts')
-    <script src="https://www.paypal.com/sdk/js?client-id=AWqX4G68cctSt5kPVczTdYqEHsgYLS8Mya7lLA7ZFCIm9ZkXrDH3De9Sd3Ribyy5K5-qAsulp0kZgZ-J"></script>
+    <script src="https://www.paypal.com/sdk/js?client-id=AWqX4G68cctSt5kPVczTdYqEHsgYLS8Mya7lLA7ZFCIm9ZkXrDH3De9Sd3Ribyy5K5-qAsulp0kZgZ-J&currency=CHF"></script>
     <script src="{{ url('assets/js/paypal.js') }}"></script>
 @stop
