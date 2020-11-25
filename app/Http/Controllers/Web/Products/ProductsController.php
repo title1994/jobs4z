@@ -20,6 +20,8 @@ class ProductsController extends Controller
         return view('product.list', compact('products'));
     }
 
+
+
     /**
      * Show the form for creating a new resource.
      *
@@ -44,7 +46,7 @@ class ProductsController extends Controller
             'amount' => $request->amount,
             ));
 
-        return redirect()->route('products.index')
+        return redirect()->route('products_manage.index')
             ->withSuccess(__('Product created successfully.'));
     }
 
@@ -86,7 +88,7 @@ class ProductsController extends Controller
             'amount' => $request->amount,
             ));
 
-        return redirect()->route('products.index')
+        return redirect()->route('products_manage.index')
             ->withSuccess(__('products updated successfully.'));
     }
 
@@ -101,7 +103,7 @@ class ProductsController extends Controller
         $product = Products::find($id);
         $product->delete();
 
-        return redirect()->route('products.index')
+        return redirect()->route('products_manage.index')
             ->withSuccess(__('Product deleted successfully.'));
     }
 }

@@ -5,14 +5,14 @@
     <td class="align-middle">{{ $product->amount }}</td>
     <td class="align-middle">{{ $product->created_at->format(config('app.date_format')) }}</td>
     <td class="text-center align-middle">
-        <a href="{{ route('products.edit', $product) }}"
+        <a href="{{ route('products_manage.edit', $product) }}"
            class="btn btn-icon edit"
            title="@lang('Edit Products')"
            data-toggle="tooltip" data-placement="top">
             <i class="fas fa-edit"></i>
         </a>
 
-        <a href="{{ route('products.destroy', $product) }}"
+        <a href="{{ route('products_manage.destroy', $product) }}"
            class="btn btn-icon"
            title="@lang('Delete Product')"
            data-toggle="tooltip"

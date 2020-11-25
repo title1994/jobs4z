@@ -5,7 +5,7 @@
 
 @section('breadcrumbs')
     <li class="breadcrumb-item">
-        <a href="{{ route('products.index') }}">@lang('Products')</a>
+        <a href="{{ route('products_manage.index') }}">@lang('Products')</a>
     </li>
     <li class="breadcrumb-item active">
         {{ __($edit ? 'Edit' : 'Create') }}
@@ -15,9 +15,9 @@
 @section('content')
 @include('partials.messages')
 @if ($edit)
-    {!! Form::open(['route' => ['products.update', $product], 'method' => 'PUT', 'id' => 'product-form']) !!}
+    {!! Form::open(['route' => ['products_manage.update', $product], 'method' => 'PUT', 'id' => 'product-form']) !!}
 @else
-    {!! Form::open(['route' => 'products.store', 'id' => 'product-form']) !!}
+    {!! Form::open(['route' => 'products_manage.store', 'id' => 'product-form']) !!}
 @endif
 <div class="card">
     <div class="card-body">

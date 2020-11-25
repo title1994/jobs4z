@@ -1,14 +1,10 @@
-@extends('layouts.auth')
+@extends('layouts.user')
 
 @section('page-title', trans('Login'))
 
 @section('content')
 
 <div class="col-md-8 col-lg-6 col-xl-5 mx-auto my-10p" id="login">
-    <div class="text-center">
-        <label style="color:red;font-size:50px;">4z.com</label>
-    </div>
-
     <div class="card mt-5">
         <div class="card-body">
             <h5 class="card-title text-center mt-4 text-uppercase">
@@ -48,12 +44,14 @@
 
 
                     @if (setting('remember_me'))
+                    <div id="rememberme">
                         <div class="custom-control custom-checkbox">
                             <input type="checkbox" class="custom-control-input" name="remember" id="remember" value="1"/>
                             <label class="custom-control-label font-weight-normal" for="remember">
                                 @lang('Remember me?')
                             </label>
                         </div>
+                    </div>
                     @endif
 
 
@@ -65,18 +63,20 @@
                 </form>
 
                 @if (setting('forgot_password'))
+                <div id="forgotpassword">
                     <a href="<?= route('password.request') ?>" class="forgot">@lang('I forgot my password')</a>
+                </div>
                 @endif
             </div>
         </div>
     </div>
 
-    <div class="text-center text-muted">
+    <!-- <div class="text-center text-muted">
         @if (setting('reg_enabled'))
             @lang("Don't have an account?")
             <a class="font-weight-bold" href="<?= url("register") ?>">@lang('Sign Up')</a>
         @endif
-    </div>
+    </div> -->
 </div>
 
 @stop

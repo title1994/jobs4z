@@ -1,12 +1,12 @@
-<nav class="navbar fixed-top align-items-start navbar-expand-lg pl-0 pr-0 py-0" >
+<nav class="navbar fixed-top align-items-start navbar-expand-lg pl-0 pr-0 py-0 bg-dark">
 
-    <div class="navbar-brand-wrapper d-flex align-items-center justify-content-center">
+    <div class="navbar-brand-wrapper d-flex align-items-center justify-content-center bg-dark">
         <a class="navbar-brand mr-0" href="{{ url('/') }}">
             <label style="color:red;font-size:40px;">4z.com</label>
         </a>
     </div>
 
-    <div>
+    <div class="bg-dark">
         @if (app('impersonate')->isImpersonating())
             <a href="{{ route('impersonate.leave') }}" class="navbar-toggler text-danger hidden-md">
                 <i class="fas fa-user-secret"></i>
@@ -24,36 +24,31 @@
         </button>
     </div>
 
-    <div class="collapse navbar-collapse" id="top-navigation">
-        <div class="row ml-2">
-            <div class="col-lg-12 d-flex align-items-left align-items-md-center flex-column flex-md-row py-3">
-                <h4 class="page-header mb-0">
-                    @yield('page-heading')
-                </h4>
-            </div>
-        </div>
+    <div class="collapse navbar-collapse bg-dark" id="top-navigation">
 
         <ul class="navbar-nav ml-auto pr-3 flex-row">
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle"
-                   href="#"
-                   id="navbarDropdown"
-                   role="button"
-                   data-toggle="dropdown"
-                   aria-haspopup="true"
-                   aria-expanded="false">
-                    <img src="{{ auth()->user()->present()->avatar }}"
-                         width="50"
-                         height="50"
-                         class="rounded-circle img-thumbnail img-responsive">
+            <div class="nav-item">
+                <a href="{{ route('userproducts.index') }}" id="product_button">
+                    @lang('Account recharge')
                 </a>
-                <div class="dropdown-menu dropdown-menu-right position-absolute p-0" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item py-2" href="{{ route('auth.logout') }}">
-                        <i class="fas fa-sign-out-alt text-muted mr-2"></i>
-                        @lang('Logout')
-                    </a>
-                </div>
-            </li>
+            </div>
+            <div class="nav-item">
+                <select>
+                    <option value='English'>English</option>
+                    <option value='French'>French</option>
+                </select>
+            </div>
+            <div class="nav-item">
+                @if (Auth::check())
+                <a href="{{ route('auth.logout') }}" id="logout_button">
+                    @lang('Logout')
+                </a>
+                @else
+                <a href="{{ route('auth.login') }}" id="login_button">
+                    @lang('Login')
+                </a>
+                @endif
+            </div>
         </ul>
     </div>
 </nav>

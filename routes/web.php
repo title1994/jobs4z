@@ -4,8 +4,12 @@
  * Authentication
  */
 Route::get('login', 'Auth\LoginController@show');
-Route::post('login', 'Auth\LoginController@login');
+Route::post('login', 'Auth\LoginController@login')->name('auth.login');
 Route::get('logout', 'Auth\LoginController@logout')->name('auth.logout');
+
+Route::post('/', 'HomeController@index')->name('welcome.index');
+Route::get('/', 'HomeController@index')->name('welcome.index');
+
 
 Route::group(['middleware' => ['registration', 'guest']], function () {
     Route::get('register', 'Auth\RegisterController@show');
@@ -32,6 +36,7 @@ Route::group(['middleware' => 'two-factor'], function () {
 Route::get('auth/{provider}/login', 'Auth\SocialAuthController@redirectToProvider')->name('social.login');
 Route::get('auth/{provider}/callback', 'Auth\SocialAuthController@handleProviderCallback');
 
+
 Route::group(['middleware' => ['auth', 'verified']], function () {
 
     /**
@@ -43,7 +48,7 @@ Route::group(['middleware' => ['auth', 'verified']], function () {
      * Dashboard
      */
 
-    Route::get('/', 'DashboardController@index')->name('dashboard');
+    Route::get('/dashboard', 'DashboardController@index')->name('dashboard');
 
     /**
      * User Profile
@@ -122,8 +127,12 @@ Route::group(['middleware' => ['auth', 'verified']], function () {
     /**
      * Products Management 
      */
-    Route::resource('products', 'Products\ProductsController')
+    Route::resource('products_manage', 'Products\ProductsController')
         ->middleware('permission:products.manage');
+    /**
+     * User Products Management
+     */
+    Route::get('products', 'Products\UserProductsController@index')->name('userproducts.index');
 
     /**
      * Pay Management

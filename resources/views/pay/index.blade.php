@@ -12,7 +12,8 @@
     <form method="POST" action="">
         @csrf
         <div class="row">
-            <div class="col-md-9">
+            <div class="col-md-2"></div>
+            <div class="col-md-8">
                 <div class="form-group">
                     <label for="name">Product</label>
                     <input type="text"

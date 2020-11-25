@@ -23,12 +23,6 @@ class DashboardController extends Controller
             session()->flash('success', __('E-Mail verified successfully.'));
         }
 
-        $user = auth()->user();
-        if ($user->role_id == 1) {
-            return view('dashboard.index');
-        } elseif ($user->role_id == 2) {
-            $products = Products::where('product_name_fr', 'LIKE', "%$request->search%")->paginate();
-            return view('product.index', ['allproducts' => $products]);
-        }
+        return view('dashboard.index');
     }
 }

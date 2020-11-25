@@ -37,7 +37,7 @@ class Authenticate
         if ($this->auth->guest()) {
             return $request->expectsJson()
                 ? response('Unauthorized.', 401)
-                : redirect()->guest('login');
+                : redirect()->guest('/login');
         }
 
         return $next($request);

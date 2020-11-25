@@ -28,7 +28,7 @@
 
                             <span class="input-group-append">
                                 @if (Request::has('search') && Request::get('search') != '')
-                                    <a href="{{ route('products.index') }}"
+                                    <a href="{{ route('products_manage.index') }}"
                                            class="btn btn-light d-flex align-items-center text-muted"
                                            role="button">
                                         <i class="fas fa-times"></i>
@@ -41,7 +41,7 @@
                     </div>
                 </div>
                 <div class="col-md-8">
-                    <a href="{{ route('products.create') }}" class="btn btn-primary btn-rounded float-right">
+                    <a href="{{ route('products_manage.create') }}" class="btn btn-primary btn-rounded float-right">
                         <i class="fas fa-plus mr-2"></i>
                         @lang('Add Product')
                     </a>

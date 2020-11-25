@@ -10,7 +10,7 @@ class Products extends Plugin
     public function sidebar()
     {
         return Item::create(__('Products'))
-            ->route('products.index')
+            ->route('products_manage.index')
             ->icon('fas fa-th-large')
             ->active("products*")
             ->permissions('products.manage');
