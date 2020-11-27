@@ -66,3 +66,7 @@
     height: 100%;
     align-items: center;    
 }
+
+#product_detail_text{
+    font-size: 1.275rem;
+}

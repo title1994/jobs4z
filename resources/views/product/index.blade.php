@@ -21,9 +21,9 @@
             <div class="card-body">
                 <div class="product-detail">
                     @if(app()->getLocale() == "en")
-                    <h3>{{$product->product_detail_en}}</h3>
+                    <h3 id="product_detail_text">{{$product->product_detail_en}}</h3>
                     @else
-                    <h3>{{$product->product_detail_fr}}</h3>
+                    <h3 id="product_detail_text">{{$product->product_detail_fr}}</h3>
                     @endif
                 </div>
                 <div class="product-amount">
