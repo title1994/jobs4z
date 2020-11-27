@@ -20,7 +20,7 @@
                            class="form-control input-solid"
                            id="name"
                            name="name"
-                           placeholder="@lang('Product Name')"
+                           placeholder="Product Name"
                            value="{{$product->product_name_en}}" readonly>
                 </div>
                 <div class="form-group">
@@ -29,7 +29,7 @@
                            class="form-control input-solid"
                            id="Level"
                            name="Level"
-                           placeholder="@lang('Level')"
+                           placeholder="Level"
                            value="{{$level}}" readonly>
                 </div>
                 <div class="form-group">
@@ -38,7 +38,7 @@
                            class="form-control input-solid"
                            id="Amount"
                            name="Amount"
-                           placeholder="@lang('Amount')"
+                           placeholder="Amount"
                            value="{{$product->amount}} CHF" readonly>
                 </div>
 
