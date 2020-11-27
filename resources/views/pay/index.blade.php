@@ -15,7 +15,7 @@
             <div class="col-md-2"></div>
             <div class="col-md-8">
                 <div class="form-group">
-                    <label for="name">@lang('Product')</label>
+                    <label for="name">Product</label>
                     <input type="text"
                            class="form-control input-solid"
                            id="name"
@@ -24,7 +24,7 @@
                            value="{{$product->product_name_en}}" readonly>
                 </div>
                 <div class="form-group">
-                    <label for="Level">@lang('Level')</label>
+                    <label for="Level">Level</label>
                     <input type="text"
                            class="form-control input-solid"
                            id="Level"
