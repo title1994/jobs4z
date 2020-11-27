@@ -15,33 +15,33 @@
             <div class="col-md-2"></div>
             <div class="col-md-8">
                 <div class="form-group">
-                    <label for="name">Product</label>
+                    <label for="name">@lang('Product')</label>
                     <input type="text"
                            class="form-control input-solid"
                            id="name"
                            name="name"
-                           placeholder="Product Name"
+                           placeholder="@lang('Product Name')"
                            value="{{$product->product_name_en}}" readonly>
                 </div>
                 <div class="form-group">
-                    <label for="Level">Level</label>
+                    <label for="Level">@lang('Level')</label>
                     <input type="text"
                            class="form-control input-solid"
                            id="Level"
                            name="Level"
-                           placeholder="Level"
+                           placeholder="@lang('Level')"
                            value="{{$level}}" readonly>
                 </div>
                 <div class="form-group">
-                    <label for="Amount">Amount</label>
+                    <label for="Amount">@lang('Amount')</label>
                     <input type="text"
                            class="form-control input-solid"
                            id="Amount"
                            name="Amount"
-                           placeholder="Amount"
-                           value="{{$product->amount}}" readonly>
+                           placeholder="@lang('Amount')"
+                           value="{{$product->amount}} CHF" readonly>
                 </div>
-                
+
                 <div class="form-group button-part">
                     <div id="paypal-button-container"></div>
                 </div>
