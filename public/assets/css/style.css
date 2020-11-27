@@ -59,3 +59,10 @@
 .card_widget{
     height: auto !important;
 }
+
+.product_list{
+    margin-top:10vh;
+    justify-content: center;
+    height: 100%;
+    align-items: center;    
+}

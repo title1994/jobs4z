@@ -6,7 +6,7 @@
 @section('content')
     @include('partials.messages')
 
-<div class="row">
+<div class="row product_list">
     @foreach($allproducts as $product)
     <div class="col-md-4 col-sm-4 col-xs-6">
     
