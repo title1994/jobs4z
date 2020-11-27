@@ -34,14 +34,17 @@
                 </div>
                 <div class="form-group">
                     <label for="Amount">@lang('Amount')</label>
-                    <div class="row">
+                    
+                    <div class="input-group mb-3">
                         <input type="text"
                             class="form-control input-solid"
                             id="Amount"
                             name="Amount"
                             placeholder="@lang('Amount')"
                             value="{{$product->amount}}" readonly>
-                        <label>CHF</label>
+                            <div class="input-group-append">
+                                <span class="input-group-text" id="basic-addon2">CHF</span>
+                            </div>
                     </div>
                 </div>
 
