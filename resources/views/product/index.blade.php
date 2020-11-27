@@ -41,6 +41,11 @@
                                 <option value='3'>@lang("Level") 3</option>
                                 <option value='4'>@lang("Level") 4</option>
                                 <option value='5'>@lang("Level") 5</option>
+                                <option value='1'>@lang("Level") 6</option>
+                                <option value='2'>@lang("Level") 7</option>
+                                <option value='3'>@lang("Level") 8</option>
+                                <option value='4'>@lang("Level") 9</option>
+                                <option value='5'>@lang("Level") 10</option>
                             </select>
                         </div>
                         <div class="form-group col-sm-6">
