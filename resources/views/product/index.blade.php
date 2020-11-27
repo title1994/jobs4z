@@ -8,7 +8,7 @@
 
 <div class="row">
     @foreach($allproducts as $product)
-    <div class="col-md-3 col-sm-4 col-xs-6">
+    <div class="col-md-4 col-sm-4 col-xs-6">
     
         <div class="card widget card_widget">
             <div class="card-header">
