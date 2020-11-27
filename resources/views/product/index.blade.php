@@ -26,6 +26,9 @@
                     <h3>{{$product->product_detail_fr}}</h3>
                     @endif
                 </div>
+                <div class="product-amount">
+                    <h3>{{$product->amount}} CHF</h3>
+                </div>
             </div>
             <form method="POST" action="{{ route('pay.show', $product->id)}}">
             @csrf
