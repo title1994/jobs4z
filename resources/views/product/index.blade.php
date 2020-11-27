@@ -10,7 +10,7 @@
     @foreach($allproducts as $product)
     <div class="col-md-3 col-sm-4 col-xs-6">
     
-        <div class="card widget">
+        <div class="card widget card_widget">
             <div class="card-header">
                 @if(app()->getLocale() == "en")
                 <h3>{{$product->product_name_en}}</h3>
