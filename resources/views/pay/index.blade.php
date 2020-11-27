@@ -13,7 +13,8 @@
         @csrf
         <div class="row">
             <div class="col-md-2"></div>
-            <div class="form-group">
+            <div class="col-md-8">
+                <div class="form-group">
                     <label for="name">@lang('Product')</label>
                     <input type="text"
                            class="form-control input-solid"
@@ -39,6 +40,7 @@
                            name="Amount"
                            placeholder="@lang('Amount')"
                            value="{{$product->amount}}" readonly>
+                    <label>CHF</label>
                 </div>
 
                 <div class="form-group button-part">
