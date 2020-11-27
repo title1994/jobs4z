@@ -50,7 +50,6 @@
                 </div>
 
                 <div class="form-group button-part">
-                    <a class="btn btn-danger text-white" href="javascript: window.history.go(-1);">cancel</a>
                     <div id="paypal-button-container"></div>
                 </div>
             </div>
