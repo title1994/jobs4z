@@ -33,7 +33,7 @@
                            value="{{$level}}" readonly>
                 </div>
                 <div class="form-group">
-                    <label for="Amount">@lang('Amount')</label>
+                    <label for="Amount">Amount</label>
                     <input type="text"
                            class="form-control input-solid"
                            id="Amount"
