@@ -15,41 +15,42 @@
             <div class="col-md-2"></div>
             <div class="col-md-8">
                 <div class="form-group">
-                    <label for="name">@lang('Product')</label>
+                    <label for="name">Product</label>
                     <input type="text"
                            class="form-control input-solid"
                            id="name"
                            name="name"
-                           placeholder="@lang('Product Name')"
+                           placeholder="Product Name"
                            value="{{$product->product_name_en}}" readonly>
                 </div>
                 <div class="form-group">
-                    <label for="Level">@lang('Level')</label>
+                    <label for="Level">Level</label>
                     <input type="text"
                            class="form-control input-solid"
                            id="Level"
                            name="Level"
-                           placeholder="@lang('Level')"
+                           placeholder="Level"
                            value="{{$level}}" readonly>
                 </div>
                 <div class="form-group">
-                    <label for="Amount">@lang('Amount')</label>
+                    <label for="Amount">Amount</label>
                     <input type="text"
                            class="form-control input-solid"
                            id="Amount"
                            name="Amount"
-                           placeholder="@lang('Amount')"
-                           value="{{$product->amount}} CHF" readonly>
+                           placeholder="Amount"
+                           value="{{$product->amount}}" readonly>
                 </div>
-                <!-- <div class="form-group">
-                    <label for="Method">@lang('Method')</label>
+                <div class="form-group">
+                    <label for="Method">Method</label>
                     <select class="form-control" name="Method" id="payment_method">
-                        <option value='1'>@lang('Paypal')</option>
-                        <option value='2'>@lang('CreditCard')</option>
+                        <option value='1'>Paypal</option>
+                        <option value='2'>CreditCard</option>
                     </select>
-                </div> -->
+                </div>
 
                 <div class="form-group button-part">
+                    <a class="btn btn-danger text-white" href="javascript: window.history.go(-1);">cancel</a>
                     <div id="paypal-button-container"></div>
                 </div>
             </div>
