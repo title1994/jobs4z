@@ -41,14 +41,7 @@
                            placeholder="Amount"
                            value="{{$product->amount}}" readonly>
                 </div>
-                <div class="form-group">
-                    <label for="Method">Method</label>
-                    <select class="form-control" name="Method" id="payment_method">
-                        <option value='1'>Paypal</option>
-                        <option value='2'>CreditCard</option>
-                    </select>
-                </div>
-
+                
                 <div class="form-group button-part">
                     <div id="paypal-button-container"></div>
                 </div>
