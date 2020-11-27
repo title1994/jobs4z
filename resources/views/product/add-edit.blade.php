@@ -50,6 +50,24 @@
                            value="{{ $edit ? $product->product_name_fr : old('product_name_fr') }}">
                 </div>
                 <div class="form-group">
+                    <label for="product_detail_en">@lang('Product detail (English)')</label>
+                    <input type="text"
+                           class="form-control input-solid"
+                           id="product_detail_en"
+                           name="product_detail_en"
+                           placeholder="@lang('Product detail')"
+                           value="{{ $edit ? $product->product_detail_en : old('product_detail_en') }}">
+                </div>
+                <div class="form-group">
+                    <label for="product_detail_fr">@lang('Product detail (French)')</label>
+                    <input type="text"
+                           class="form-control input-solid"
+                           id="product_detail_fr"
+                           name="product_detail_fr"
+                           placeholder="@lang('Product detail')"
+                           value="{{ $edit ? $product->product_detail_fr : old('product_detail_fr') }}">
+                </div>
+                <div class="form-group">
                     <label for="amount">@lang('Amount')</label>
                     <input name="amount"
                               id="amount"

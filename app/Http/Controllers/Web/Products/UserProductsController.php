@@ -11,6 +11,9 @@ class UserProductsController extends Controller
 {
     public function index(Request $request){
         if (auth()->check()) {
+            if (auth()->user()->role_id == 1) {
+                return redirect()->route('dashboard');
+            }
             $products = Products::where('product_name_fr', 'LIKE', "%$request->search%")->paginate();
             return view('product.index', ['allproducts' => $products]);
         } else {

@@ -56,6 +56,19 @@
                     </a>
                 </li>
             @endif
+            
+            
+            <li class="nav-item d-flex align-items-center px-3">
+                <select id="language-option">
+                    @foreach(config()->get('app.locales') as $code => $lang)
+                        @if($code == app()->getLocale())
+                        <option value="{{ route('locale', $code) }}" selected>{{ $lang }}</option>
+                        @else
+                        <option value="{{ route('locale', $code) }}">{{ $lang }}</option>
+                        @endif
+                    @endforeach
+                </select>
+            </li>
 
             @hook('navbar:items')
 

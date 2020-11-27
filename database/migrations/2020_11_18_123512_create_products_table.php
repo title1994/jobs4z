@@ -17,6 +17,8 @@ class CreateProductsTable extends Migration
             $table->id();
             $table->string('product_name_en');
             $table->string('product_name_fr');
+            $table->string('product_detail_en');
+            $table->string('product_detail_fr');
             $table->unsignedInteger('amount');
             $table->timestamps();
         });

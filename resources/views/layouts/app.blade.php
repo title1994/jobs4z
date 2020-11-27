@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="{{app()->getLocale()}}">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta charset="utf-8">
@@ -42,6 +42,7 @@
 
     <script src="{{ url(mix('assets/js/vendor.js')) }}"></script>
     <script src="{{ url('assets/js/as/app.js') }}"></script>
+    <script src="{{ url('assets/js/custom.js') }}"></script>
     @yield('scripts')
 
     @hook('app:scripts')

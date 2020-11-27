@@ -37,6 +37,7 @@ class Kernel extends HttpKernel
             \Vanguard\Http\Middleware\VerifyCsrfToken::class,
             \Illuminate\Routing\Middleware\SubstituteBindings::class,
             'banned',
+            \Vanguard\Http\Middleware\SetLocale::class,
         ],
         'api' => [
             \Vanguard\Http\Middleware\UseApiGuard::class,

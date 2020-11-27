@@ -1,6 +1,17 @@
 <tr>
     <td class="align-middle">
-        {{ $product->product_name_en }}
+        @if(app()->getLocale() == "en")
+        {{$product->product_name_en}}
+        @else
+        {{$product->product_name_fr}}
+        @endif
+    </td>
+    <td class="align-middle">
+        @if(app()->getLocale() == "en")
+        {{ $product->product_detail_en }}
+        @else
+        {{ $product->product_detail_fr }}
+        @endif
     </td>
     <td class="align-middle">{{ $product->amount }}</td>
     <td class="align-middle">{{ $product->created_at->format(config('app.date_format')) }}</td>

@@ -2,19 +2,6 @@
     margin-top: 9em; /*set to a negative number 1/2 of your height*/
 }
 
-#paypal-button-container{
-    width: max-content;
-    float: right;
-}
-
-.paypal-button-number-1{
-    display: none;
-}
-
-.paypal-powered-by{
-    display: none;
-}
-
 #login_button{
     text-decoration: none;
 }

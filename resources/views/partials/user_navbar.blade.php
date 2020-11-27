@@ -33,9 +33,14 @@
                 </a>
             </div>
             <div class="nav-item">
-                <select>
-                    <option value='English'>English</option>
-                    <option value='French'>French</option>
+                <select id="language-option">
+                    @foreach(config()->get('app.locales') as $code => $lang)
+                        @if($code == app()->getLocale())
+                        <option value="{{ route('locale', $code) }}" selected>@lang($lang)</option>
+                        @else
+                        <option value="{{ route('locale', $code) }}">@lang($lang)</option>
+                        @endif
+                    @endforeach
                 </select>
             </div>
             <div class="nav-item">

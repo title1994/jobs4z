@@ -3,11 +3,11 @@
 <div id="parent_div">  
     @if (Auth::check())
     <div id="home_lbl">
-        Welcome
+        @lang('validation.welcome')
     </div>
     @else  
     <div id="home_lbl">
-        Welcome
+        @lang('validation.welcome')
     </div>
     @endif
 </div>

@@ -10,6 +10,7 @@ Route::get('logout', 'Auth\LoginController@logout')->name('auth.logout');
 Route::post('/', 'HomeController@index')->name('welcome.index');
 Route::get('/', 'HomeController@index')->name('welcome.index');
 
+Route::get('/lang/{locale}', 'LocalizationController@index')->name('locale');
 
 Route::group(['middleware' => ['registration', 'guest']], function () {
     Route::get('register', 'Auth\RegisterController@show');
@@ -138,6 +139,7 @@ Route::group(['middleware' => ['auth', 'verified']], function () {
      * Pay Management
      */
     Route::post('pay/{id}', 'Pay\PayController@show')->name('pay.show');
+    Route::get('pay/{id}', 'Pay\PayController@show')->name('pay.show');
 
     /**
      * Roles & Permissions

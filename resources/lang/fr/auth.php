@@ -13,7 +13,7 @@ return [
     |
     */
 
-    'failed'   => 'Diese Zugangsdaten wurden nicht in unserer Datenbank gefunden.',
-    'throttle' => 'Zu viele Login Versuche. Versuchen Sie es bitte in :seconds Sekunden.',
+    'failed'   => 'Ces informations d\'identification n\'ont pas été trouvées dans notre base de données.',
+    'throttle' => 'Trop de tentatives de connexion. Veuillez essayer en: secondes secondes.',
 
 ];

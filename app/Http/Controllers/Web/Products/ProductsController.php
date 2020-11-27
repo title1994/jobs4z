@@ -43,6 +43,8 @@ class ProductsController extends Controller
         Products::create(array(
             'product_name_en' => $request->product_name_en,
             'product_name_fr' => $request->product_name_fr,
+            'product_detail_en' => $request->product_detail_en,
+            'product_detail_fr' => $request->product_detail_fr,
             'amount' => $request->amount,
             ));
 
@@ -85,6 +87,8 @@ class ProductsController extends Controller
         Products::whereId($id)->update(array(
             'product_name_en' => $request->product_name_en,
             'product_name_fr' => $request->product_name_fr,
+            'product_detail_en' => $request->product_detail_en,
+            'product_detail_fr' => $request->product_detail_fr,
             'amount' => $request->amount,
             ));
 

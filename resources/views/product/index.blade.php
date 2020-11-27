@@ -12,11 +12,19 @@
     
         <div class="card widget">
             <div class="card-header">
+                @if(app()->getLocale() == "en")
                 <h3>{{$product->product_name_en}}</h3>
+                @else
+                <h3>{{$product->product_name_fr}}</h3>
+                @endif
             </div>
             <div class="card-body">
                 <div class="product-detail">
-                    <p>Product detail here</p>
+                    @if(app()->getLocale() == "en")
+                    <h3>{{$product->product_detail_en}}</h3>
+                    @else
+                    <h3>{{$product->product_detail_fr}}</h3>
+                    @endif
                 </div>
             </div>
             <form method="POST" action="{{ route('pay.show', $product->id)}}">
@@ -25,11 +33,11 @@
                     <div class="row">
                         <div class="form-group col-sm-6">
                             <select class="form-control" name="level">
-                                <option value='1'>Level 1</option>
-                                <option value='2'>Level 2</option>
-                                <option value='3'>Level 3</option>
-                                <option value='4'>Level 4</option>
-                                <option value='5'>Level 5</option>
+                                <option value='1'>@lang("Level") 1</option>
+                                <option value='2'>@lang("Level") 2</option>
+                                <option value='3'>@lang("Level") 3</option>
+                                <option value='4'>@lang("Level") 4</option>
+                                <option value='5'>@lang("Level") 5</option>
                             </select>
                         </div>
                         <div class="form-group col-sm-6">

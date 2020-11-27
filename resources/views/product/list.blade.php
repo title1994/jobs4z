@@ -54,6 +54,7 @@
                 <thead>
                 <tr>
                     <th class="min-width-80">@lang('Product name')</th>
+                    <th class="min-width-80">@lang('Product detail')</th>
                     <th class="min-width-150">@lang('Amount')</th>
                     <th class="min-width-80">@lang('Registration Date')</th>
                     <th class="text-center min-width-150">@lang('Action')</th>

@@ -106,5 +106,7 @@ return [
     */
 
     'attributes' => [],
+    
+    'welcome'       => 'Welcome to our application',
 
 ];
