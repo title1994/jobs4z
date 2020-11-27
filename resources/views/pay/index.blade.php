@@ -39,7 +39,7 @@
                            id="Amount"
                            name="Amount"
                            placeholder="Amount"
-                           value="{{$product->amount}} CHF" readonly>
+                           value="{{$product->amount}}" readonly>
                 </div>
 
                 <div class="form-group button-part">
