@@ -23,6 +23,13 @@ paypal.Buttons({
         return actions.order.capture().then(function(details) {
           // This function shows a transaction success message to your buyer.
           alert('Transaction completed by ' + details.payer.name.given_name);
+          
+          // Insert the transaction History
+          
+          $("#transactionform").submit();
+
+          // Send the Email 
+
         });
       }
 }).render('#paypal-button-container');

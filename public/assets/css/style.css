@@ -1,6 +1,6 @@
-#payment {
+/* #payment {
     margin-top: 9em; /*set to a negative number 1/2 of your height*/
-}
+} */
 
 #login_button{
     text-decoration: none;
@@ -69,4 +69,22 @@
 
 #product_detail_text{
     font-size: 1.275rem;
+}
+
+#paybuttons{
+    text-align: center;
+    margin-top: 50px;    
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.select_group{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+#expmonth{
+    margin-right: 20px;
 }

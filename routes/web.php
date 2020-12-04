@@ -142,6 +142,25 @@ Route::group(['middleware' => ['auth', 'verified']], function () {
     Route::get('pay/{id}', 'Pay\PayController@show')->name('pay.show');
 
     /**
+     * Pay by Paypal
+     */
+    Route::post('paypal', 'Pay\PayController@paypal')->name('pay.paypal');
+    Route::post('paypal/validate', 'Pay\PayController@validatePaypal')->name('pay.validatepaypal');
+    Route::post('paypal/cancel', 'Pay\PayController@cancelPaypal')->name('pay.cancelpaypal');
+    
+    /**
+     * Pay by Credit
+     */
+    Route::post('credit', 'Pay\PayController@credit')->name('pay.credit');
+    
+    /**
+     * Insert the TransactionHistory
+     */
+
+     Route::post('InsertHistory', 'Products\ProductsController@insertHistory')->name("insertHistory");
+
+
+    /**
      * Roles & Permissions
      */
     Route::group(['namespace' => 'Authorization'], function () {

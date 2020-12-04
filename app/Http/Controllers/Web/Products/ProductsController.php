@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Illuminate\View\View;
 use Vanguard\Http\Controllers\Controller;
 use Vanguard\Products;
+use Vanguard\TransactionHistory;
 
 class ProductsController extends Controller
 {
@@ -30,6 +31,15 @@ class ProductsController extends Controller
     public function create()
     {
         return view('product.add-edit', ['edit' => false]);
+    }
+
+    public function insertHistory(Request $request){  
+        TransactionHistory::create(array(
+            'user_email' => auth()->user()->email,
+            'level' => $request->all()['tmplevel'],
+            ));
+
+        return redirect()->to($request->get('to'));
     }
 
     /**

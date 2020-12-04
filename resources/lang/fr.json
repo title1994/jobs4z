@@ -260,5 +260,17 @@
     "Paypal":"Pay Pal",
     "CreditCard":"Carte de crédit",
     "English":"Anglais",
-    "French":"Français"
+    "French":"Français",
+    "Payment method":"Mode de paiement",
+    "Credit card":"Carte de crédit",
+    "Pay with":"Payer avec",
+    "Firstname":"Prénom",
+    "Lastname":"Nom de famille",
+    "ZIP / Postal Code":"Zip / code postal",
+    "City":"Ville",
+    "Email Address":"Adresse e-mail",
+    "Contact Number":"Numéro de contact",
+    "Card Number":"Numéro de carte",
+    "Expiry date(mm/yyyy)":"Date d'expiration(mm/yyyy)",
+    "Card verification code":"Le code de vérification de carte"
 }

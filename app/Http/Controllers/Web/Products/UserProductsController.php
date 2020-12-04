@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Illuminate\View\View;
 use Vanguard\Http\Controllers\Controller;
 use Vanguard\Products;
+use Vanguard\TransactionHistory;
 
 class UserProductsController extends Controller
 {
@@ -15,7 +16,17 @@ class UserProductsController extends Controller
                 return redirect()->route('dashboard');
             }
             $products = Products::where('product_name_fr', 'LIKE', "%$request->search%")->paginate();
-            return view('product.index', ['allproducts' => $products]);
+
+            $email = auth()->user()->email;
+
+            $level = TransactionHistory::select('level')->where('user_email', '=', $email)->orderBy('id', 'desc')->limit(1)->get();
+
+            $preLevel = 1;
+            if (!$level->isEmpty()){
+                $preLevel = $level[0]->level;
+            }
+
+            return view('product.index', ['allproducts' => $products, 'level' => $preLevel]);
         } else {
             return route::redirect('login');
         }
